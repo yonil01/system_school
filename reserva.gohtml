@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CrediCorp. Personal Natural</title>
+    <style>
+        label {
+            color: gray;
+            font-family:"TT Jenevers";
+        }
+
+        p {
+            color: gray;
+            text-align: justify;
+            font-family:"Cabin Medium";
+        }
+        .piePagina{
+            color:#5a5a5a!important;
+        }
+
+        .float-right {
+        }
+
+        .container {
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+
+        }
+
+        .col-6,
+        .col-12 {
+            margin-top: 10px;
+        }
+
+        .col-12 {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .form-control {
+            display: block;
+            width: 95%;
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            background-color: #E0E8E8;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .form-control-td {
+            background-color: #E0E8E8;
+            border-radius: 0.25rem;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff;
+        }
+
+        .block-green {
+            /*background: rgba(89, 123, 123, 0.65);*/
+            background-color: #919D9D;
+            height: 25px;
+            margin: 0px;
+            text-align: center;
+            color: white;
+            font-family: "TT Jenevers";
+        }
+
+        .subtitulo {
+            color: #919D9D!important;
+            font-family: "TT Jenevers";   
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="height: 80px; margin-top: 2%">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXMAAABcCAYAAACcN1XFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABC0SURBVHhe7Z29rx1HGYehoU+TOincGwl6kPgDbMUVVVCgJVZoSGeR2pEJBXRxTEvkjwKXzqW1pYQibmPaS5GK+nCekzv2evzO9+zX3N8jvbLvObuzM+/M/Oad2dk9PzoIIYTYPRJzIYQYAIm5EEIMgMRcCCEGQGIuhBADIDEXQogB2JyYf/ffF4fPz+4d7jz+7HDz3keH9//2weEXn/zqNeMzvrv1jz8dnjw/O3z94puLs4UQ4nKyuph//7/vT8KNSL/1u7cPP/71T6rs3Q+vHK7dvnG4e/bFaUAQQojLxCpijoATfSPgljD3MNJG2LmWEEKMzqJiTsTM0khLBF5qb/327cPNe39QtC6EGJpFxJzoGEFdUsR9c6KuSF0IMSKzi/n9Zw9XFXHfWFu///ThRe6EEGIMZhNzljXe/+sHpqBuwdgRo6UXIcQozCLmX7/496ai8ZARpZNXIYTYO93F/POzL3Yh5M5YS2fXixBC7JmuYs5OFUsw92DkXQgh9ko3Md+zkDuToAsh9koXMR9ByJ1J0IUQe6RZzO8/e7SrNfKUsYb+1fOzi9IJIcQ+aBLzvexaKTUEXbtchBB7olrMeZLy6sc/N8VwBKNsQgixF6rFnEfjLREcyXiwSAgh9kCVmPMO8RGXV3zTcouohaeLeXPnO7+/cvq35GljZr2lTyfTTt31CEIu6zuIKDebGPDD1Y9/VtR/nzz/6qUPCVb3RpWY//JYYEv8RjQtt4gaENSadsS7/V2gxL+5u6ve+fDKa9e7rLuyfL8TkOUMbAye0/OwvfmwWMx5wtMv9Og2xxOiNJ7rn944RQFzGBGGZhXrQR347ejFeTzatgQFYyYc47vzN88j4LqM/NS4j5fTDx48e/jGefzYzZ4oEvPRb3qGjHe49GaJ2c0c+RZ51Ig5Ubl/Dnbnn59dHGEjMX+F5ffUYAj8WI5/3t58WCTmvM7WL/BlsZ7RudX55rLStVfRhxoxtwQFS7U9ifkrJOaZ9IomcThrW0QiDBA4m3/5m8+tCgkZa2J+WhiVw+fWtKvGeka5S4n5u0c/XtYbYWtTI+bUlb+xgDqkvcSQmL9CYp7B1//55o3Cltr12zderl/RcHEgIsyNBgynO/FBmK99+p6ZDkZarpKstPgBCver/fzr3xgptZ47W0JiTuPpZazHa818PWrEHGgbtFXq8Oa9j5JCDhLzV0jMM0Ag/cLm2nSLEIKbirxZl3dTyyffnr12PGm5XwqiAlJr+HzPmiOC76dVaqm1y1yszqf17bGoFfMaJOavkJhnUHvjk10VCCmRdunedASO96RwPtdHyPk/A0OpKE/TunaMWq1jUtZLcCXm4yMxXweJeQKrseTYtdvvncSz5WlRljeYFZAOxv9bHlhyP+pcK+g9li4k5uMjMV8HiXkClkb8gqbMRdE9HvvnJhCQXu0MYWqsSdam1WNXi8R8fCTm6yAxT1D6w8zuZiGvx7W+LzUqg/RYJrn/tE+arLvXzDh6PEiwNzFn4GOL49rbHF0eyM8aOD/kXH8PYr5mnc7VprYo5tOyztl2s8S8NIK99eUPyyItyyHO3Jo7jys7wevxq//uMd/StHqI7tbFnHdUsJOC2ZVVh3zGoMYsZS4xIA8sqVH/oTzwHfnM6aw10D5ieXDXt3xQK+ak5XzvZpApcsV8Wq/+8c6fc9Up5WCGn6rP1uuvLebknXJSd+TFKisWazu1JMWchhLKkGWIJBls2f0yNSpimtapss/LI2rLGHRK0xpZzGtuUmM03F6N0r3syLpOzPBfjyUwcCJe4gvfB7Vi7pedv1OkxJx8lfqU8vcAX9Ystda2qTXEfDro+2nkWK/+kyXm/sVjRoEoXI0o+OYEbjozsD6rNZdWaXTe6vitiTnlaZ3tMIi3bt3sEQDQMWh/tZx2Sh3rwko7ZVMf1Iq5f05Ou4iJOVFibV/k2i1tvcWXWM31lxZzythL60irhe5ifufxn0/Os74rtVDkTKF7LLVgRHOlItIaAW5JzOksLR3Ot9qIrld9YrUi9OBp3czEN3ywBTHvMTi6+1+l9PJl6fWXFvOe7bbW146kmJcKc404hoy0LCfzea8Bg7RKB6xRxJwINibkNC6eJKU+nbHOl3pFAseVkJqG06m47jQffGYd6wx/lkTodKKY+OALrknk7yyVB9+WFPOQUQ7qzy8Hn1vHY3xXMjhybMiXXIvZAv2X4zD+z2eWEGMl119azGNt1/maPuT8nGozpe12SlLMrULGDKf3jJqttGoEOGQ4+bKKOc8B+Pk45eXYIVIdgDLgO/9cZzkdCBBm63zs1pefRBs2eeCYkHCQvxxos6FBjc6XKgt9JCREU1tTzCkH+Yz5M1aOEpGxfImwIdgpqE//XCzn3gEsLeb43l0T4Sbo4N5TylcxXzNA1LBpMQ+ldboLfC4xb4EG7ucBowGXRAZ0UCudnM5P/ZrnHht5yXRz2qF8y+nIoUEJYSkhtT69hpjniuiUkKDmzLjuBvSipD5DmpPT75YWc0dJn3FwTuimaU16u4zMWZcfTcx72anzZtyItG4g175lMSToqc4fEtGadUN8aglpKqILDSilQu4gH6GBZWkxz3njYoibf39z+YC2lWofVlReOpiA1aZosynWEvNa8KfVbms2E8yyZt5TzK1pOJ+X5itkNdsTtyzmGJ0uJogh3+U0+hBWhBHrfDRi/3isVkShplzWgOKeOK6F+rU66JJi3iLkQP1YwhgboNlW6h/f4kurTaXa6N7EHCy9pF2WkhTzGqELdapSIy3r+qQfW2stMa5ROvvYuphjsTxajSd3TTIErxn208RCAmZNx1sFCCwBYFkuhBVJttYvWKKypJj3ECIrOo7lx7oZ2OJL6/qxuoQ9irl17at/LP/t4e5izpOBvcSKhuNHCO4zHD09tsbctLF0JsHUvIW5xRxRpFwhrCWWHgJmCWloumhFxDXRiI8lAKGByooksZjvchlBzPFDyQzD2uVE3mqxypUKOvYo5uaMJqPefbqLOQIJPZZa3HLBNC23LBK70ZRrvzmKR6jBhixn3TCF5VPSRcxajcgllr/QtXsImBWZhSIpS/jde+pbCJXPwhL+Xh14BDGHknryjwv5vQS/b6bS3KKY07cIAEPG7hf/2rOIOVgOihlRntXAagyBIi0q0YlOjyUW0mKgKE2rxsk+lm96pJvDnNe2OkToxWTWAFpz49PCStsarEoGn1JGEXPLR9ZsK9Tf8UOLWWnGsM5ZUswRZ4IE2n0o/zk2m5iXRtlOdK3Ip9Sc6OJs0sNZPaLy2peBpaZ5OYwq5tZ0MdQh/OMwS3BrsDqRJaRWu67ZRWCRmwcf/5y1xdwKdqyboCExn8NirCXmte8UCtlsYm6NzikjoqZz4hDr+xLjt0AdPdLD6eStZimIbZGtSMxtMe9Fi5j3uHcAI4s5fdunx28E51hqd8waYt5jpcC32cS8dtRlEOgh6O4Xi7DaXwhy5n40o7YCchpGCom5IvMQ/jlbFPM1I/O7/7p3cUWbpcV8DiHHZhNzOpnlpByjsJxvPYSQYyytAB3PRQS1yzec1yLkOLiH4Iwq5g+MGzmhNfNascvBTxezsNqB1sxfx5qV54o5S6QIaS/L6XtLinnoaVfKff3Y7kmTJeJUvhfbzeKoWZJw5pZc2IvMkol1jG+nG58Xd3un1375+fkP7wbBce67kOFYnOqnVWo07B5sTczxIb5pJbfjg7WNrccShzXdp3wWVgcODT6ljCLmLbtZsB7BTwlLirn1jIKb+ZewuJiHHgrJNTLHFJaC0vjYjkMUhMMw3izG3+4lNRiRtHWDks6ZSguhd5E4UFmtN05zGkUOa4o54CP/+j2E1BLoUMe3hL9HVGxFS5TXIiT8rs20MIqYW30mtOvIKnOvexC5LCXmpgAfr13TdhYXczLZ6wchEFoqmQHCFZ5/+RunIsY5wkvHI5Ly0wIiTdJCIFpFHOsptmuLuTU7yXnvRYzQDTDKakEH84/tIaTmu0Ei6+BW2+ghQCOIeegp3RDWAN1j91cJS4m5tdSLrtWwuJhD7Vr1CMZWxl6sLebW9TF+MLsWazoe6wyItiWkoWWZHEJrmKEBBSwBoi5aBhUCCT9NbEkxZ2BsXTqzBsaYYFkDNNZrRpvDUmJu3W+pbbuLPjTkOHXAYyPxLzy69Zp6O9YWc8pizbJqy2k1bCwV4YbOq+n8CJc1OKTWwEMDW+39EaKs0ExwSTHHOLdW0K1BDosNjCd9MMreko9S1hTzmsicJauQz0opEnMIdcCRrWdUDmuLOdx/+uiNPGDcwCnpeKFOn9oPDKHOz6BSstQRE9CY+DhCO61KIi3KkuobS4u5s5LtlpQjVKc5A1zIB7WCTn5YEcByzl9KzK3jS2dDsZWORcQc5/ZYO9+L9Y7KYQtiDkEhPuYFAYg1TAQ09sRbjohCrEET6XAvJATfcYx1LpYjPkD9WiKA4YvYwMK5CFhoMJnaWmKOuXKE2jKfUxfW0srp/KN/cvpBzJdYqk6BNLhx7t/vItBIsZSYk0f/eAw/pwQ91XewnHr3KRZzsAo+qt1/9uii1P3YipjTIFMDM42ODohg0blYtkgJV+k7yUO/bOMM33Bd8oCRn5hgYDkdf0poujs1fEE+uD7/pvLg29Jr5v5nzvCNq1fKwd/Wcc5OEed53uAMOb7ke9+f5CPl05QPlxJziAky39FWSRdjoKScKb84W0zMgYJamRjJqJA52IqYQ46gl1jtj0vUPlRmGaJAuUrhRlRuZ4sZPrBEZUkxp3+mBskcQ8hDWxFjIGA9fDm1nKW7JcUcv7eWkTJZs9NFxZzOEhv9925zLK84tiTmQDlbxRR/pR61TtFDfFhaaak36qY04naGD9y+eiuNnHz557SIOSAUtYKD0JB2LS2+9I3y5OTFetYhR8ytp5dTYg45s5CQuTJZ23pn+XGKGNZoNorNsbwyhYqcXo93q6/Nk2/PijsfAoYI9xr4aNxMR/3rpAx/5nTaXELRdcjI89QHTLGn3/MUcg7+1J10c/DzSv4dpT7tXafoRK2ol9arH+XmRPNAWf085t6ELx20ToHPJG3r2tP6y6VJzMGaIuzdKNPcUIF0MBqrex3vVqDzuCdqaXhT3/A3HYS800nnyjcdhPR5gMyKtsgD31FXNbskcgnlAT/gH64f8gEdkmPwZa6fXm8X+YLqBNvlyYJj+M6q1yXqdNquuN70+ti0bbXU653Hfzldg3Qocy7Oh65dlcIyHedbbYXPKHtoYGq9NjSLObS+yXBLxhsahRBib3QRc0byEQTdvWpXCCH2Rhcxh70LuoRcCLFnuok5IIY9t5gtZa07IIQQYm26irmDBXxLNLdordvphBBiC8wi5lCzzW1J48GSnlvZhBBiTWYTc9jqskvJVjEhhNgDs4q5gyidfZ+WsC5pROM1jyYLIcTWWUTMHWyqtx4AmdsQ8dDPlwkhxAgsKuYOInWedvKfQuttXEPr4kKIy8AqYu5g3ZponV/s7yHspIGAE4VrTVwIcZlYVcx9iKJ5N4R7fwNLMtY7HPiM73iPAce2vMdBCCFGYFNiLoQQog6JuRBCDIDEXAghBkBiLoQQAyAxF0KIAZCYCyHEAEjMhRBiACTmQggxABJzIYQYAIm5EEIMgMRcCCEGQGIuhBADIDEXQogBkJgLIcQASMyFEGIAJOZCCDEAEnMhhNg9h8P/ARTUFPa4BgToAAAAAElFTkSuQmCC"
+                style="width:20%; margin-right: 17%" class="float-right">
+            <p style="color: black;padding-top: 2%; margin-top: 0px;">
+
+            </p>
+        </div>
+
+        <h4 style="text-align: center;color: #919D9D!important;font-size: 24px; font-family:TT Jenevers">
+            EMPRESA FUDIBELLA
+        </h4>
+    </div>
+    <div class="container" style="margin-top: 5%">
+
+        <form action="">
+            <div class="block-green">
+                <h3>Información básica del cliente</h3>
+            </div>
+            <div class="row form-group">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <label for="Proyecto Inmobiliario">Número de Documento de Identidad.</label>
+                            <input  class="form-control" type="text" name="nrodocumento" id="nrodocumento" value="{{ range $key, $value := . }}{{if eq $key  "nrodocumento" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for=" Primer Nombre"> Primer Nombre</label>
+                            <input  class="form-control" type="text" name="nrodocumento" id="nrodocumento" value="{{ range $key, $value := . }}{{if eq $key  "primernombre" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                        <td>
+                            <label for="Segundo Nombre">Segundo Nombre</label>
+                            <input  class="form-control" type="text" name="segundonombre" id="segundonombre" value="{{ range $key, $value := . }}{{if eq $key  "segundonombre" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Primer Apellido">Primer Apellido</label>
+                            <input  class="form-control" type="text" name="primerapellido" id="primerapellido" value="{{ range $key, $value := . }}{{if eq $key  "primerapellido" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                        <td>
+                            <label for="Segundo Apellido">Segundo Apellido</label>
+                            <input  class="form-control" type="text" name="secondlastname" id="secondlastname" value="{{ range $key, $value := . }}{{if eq $key  "secondlastname" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="Primer Apellido">Correo Electronico</label>
+                            <input  class="form-control" type="text" name="email" id="email" value="{{ range $key, $value := . }}{{if eq $key  "email" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                        <td>
+                            <label for="Segundo Apellido">Dirección</label>
+                            <input  class="form-control" type="text" name="direccion" id="direccion" value="{{ range $key, $value := . }}{{if eq $key  "direccion" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Primer Apellido">Teléfono</label>
+                            <input  class="form-control" type="text" name="telefono" id="telefono" value="{{ range $key, $value := . }}{{if eq $key  "telefono" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                        <td>
+                            <label for="Segundo Apellido">Celular</label>
+                            <input  class="form-control" type="text" name="celular" id="celular" value="{{ range $key, $value := . }}{{if eq $key  "celular" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                <div class="block-green">
+                    <h3>Información del servicio</h3>
+                </div>
+                <div class="row form-group">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+
+                            <label for="Primer Apellido">Servicio.</label>
+                            <input  class="form-control" type="text" name="tiposervice" id="tiposervice" value="{{ range $key, $value := . }}{{if eq $key  "tiposervice" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                        <td>
+                            <label for="Segundo Apellido">Nombre del Servicio.</label>
+                            <input  class="form-control" type="text" name="nombreservicio" id="nombreservicio" value="{{ range $key, $value := . }}{{if eq $key  "nombreservicio" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Primer Apellido">Dirección</label>
+                            <input  class="form-control" type="text" name="direccionservicio" id="direccionservicio" value="{{ range $key, $value := . }}{{if eq $key  "direccionservicio" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                        <td>
+                            <label for="Segundo Apellido">Teléfono</label>
+                            <input  class="form-control" type="text" name="telefonoservicio" id="telefonoservicio" value="{{ range $key, $value := . }}{{if eq $key  "telefonoservicio" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Primer Apellido">Dirección</label>
+                            <input  class="form-control" type="text" name="primerapellido" id="primerapellido" value="{{ range $key, $value := . }}{{if eq $key  "primerapellido" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                        <td>
+                            <label for="Segundo Apellido">Teléfono</label>
+                            <input  class="form-control" type="text" name="primerapellido" id="primerapellido" value="{{ range $key, $value := . }}{{if eq $key  "primerapellido" }}{{ $value }}{{ end }}{{ end }}">
+                        </td>
+                    </tr>
+                </table>
+                    
+                
+            
+            <div class="row form-group">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <p>El Suscrito notificará a Credicorp Capital Fiduciaria de forma inmediata de cualquier
+                                cambio en los
+                                datos particulares, incluyendo, pero no limitado a cualquier cambio en la dirección
+                                comercial, lugar de
+                                trabajo, nacionalidad, residencia o situación fiscal referente a una jurisdicción
+                                específica. Además,
+                                si el Suscrito no es US PERSON, manifiesta con carácter de declaración jurada, que los
+                                dineros, fondos,
+                                valores, instrumentos financieros y/o cualesquier otros bienes ingresados a Credicorp
+                                Capital
+                                Fiduciaria no son de propiedad, o proporcionados, o derivados, o tenidos para el
+                                beneficio, o bajo el
+                                control de ningún US PERSON. Si el Suscrito fuera US PERSON, acuerda, mediante el
+                                presente,
+                                proporcionar oportunamente todos los documentos, confirmaciones, evidencias,
+                                declaraciones,
+                                constancias, perfeccionamiento de documentos o cualquier otra información requerida por
+                                Credicorp
+                                Capital Fiduciaria, que esta última juzgue necesario para cumplir con las estipulaciones
+                                de FATCA o sus
+                                regulaciones relacionadas, así como cualquier otra ley o regulación similar que se
+                                pudiera promulgar en
+                                cualquier otro país o jurisdicción. Asi mismo, el Suscrito y su información (datos
+                                personales, de
+                                productos, movimientos, saldos, operaciones, etc.), podrán ser reportados a las
+                                dependencias
+                                correspondientes del gobierno de los Estados Unidos de América o a la autoridad nacional
+                                a cargo de la
+                                administración de impuestos, en caso que el gobierno haya suscrito un Acuerdo
+                                Intergubernamental con el
+                                Servicio de Impuestos Internos de los EEUU, liberando a Credicorp Capital Fiduciaria de
+                                cualquier responsabilidad sobre divulgación de información confidencial.</p>
+                        </td>
+                    </tr>
+                
+                </table>
+                
+            </div>
+            
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXMAAABcCAYAAACcN1XFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABC0SURBVHhe7Z29rx1HGYehoU+TOincGwl6kPgDbMUVVVCgJVZoSGeR2pEJBXRxTEvkjwKXzqW1pYQibmPaS5GK+nCekzv2evzO9+zX3N8jvbLvObuzM+/M/Oad2dk9PzoIIYTYPRJzIYQYAIm5EEIMgMRcCCEGQGIuhBADIDEXQogB2JyYf/ffF4fPz+4d7jz+7HDz3keH9//2weEXn/zqNeMzvrv1jz8dnjw/O3z94puLs4UQ4nKyuph//7/vT8KNSL/1u7cPP/71T6rs3Q+vHK7dvnG4e/bFaUAQQojLxCpijoATfSPgljD3MNJG2LmWEEKMzqJiTsTM0khLBF5qb/327cPNe39QtC6EGJpFxJzoGEFdUsR9c6KuSF0IMSKzi/n9Zw9XFXHfWFu///ThRe6EEGIMZhNzljXe/+sHpqBuwdgRo6UXIcQozCLmX7/496ai8ZARpZNXIYTYO93F/POzL3Yh5M5YS2fXixBC7JmuYs5OFUsw92DkXQgh9ko3Md+zkDuToAsh9koXMR9ByJ1J0IUQe6RZzO8/e7SrNfKUsYb+1fOzi9IJIcQ+aBLzvexaKTUEXbtchBB7olrMeZLy6sc/N8VwBKNsQgixF6rFnEfjLREcyXiwSAgh9kCVmPMO8RGXV3zTcouohaeLeXPnO7+/cvq35GljZr2lTyfTTt31CEIu6zuIKDebGPDD1Y9/VtR/nzz/6qUPCVb3RpWY//JYYEv8RjQtt4gaENSadsS7/V2gxL+5u6ve+fDKa9e7rLuyfL8TkOUMbAye0/OwvfmwWMx5wtMv9Og2xxOiNJ7rn944RQFzGBGGZhXrQR347ejFeTzatgQFYyYc47vzN88j4LqM/NS4j5fTDx48e/jGefzYzZ4oEvPRb3qGjHe49GaJ2c0c+RZ51Ig5Ubl/Dnbnn59dHGEjMX+F5ffUYAj8WI5/3t58WCTmvM7WL/BlsZ7RudX55rLStVfRhxoxtwQFS7U9ifkrJOaZ9IomcThrW0QiDBA4m3/5m8+tCgkZa2J+WhiVw+fWtKvGeka5S4n5u0c/XtYbYWtTI+bUlb+xgDqkvcSQmL9CYp7B1//55o3Cltr12zderl/RcHEgIsyNBgynO/FBmK99+p6ZDkZarpKstPgBCver/fzr3xgptZ47W0JiTuPpZazHa818PWrEHGgbtFXq8Oa9j5JCDhLzV0jMM0Ag/cLm2nSLEIKbirxZl3dTyyffnr12PGm5XwqiAlJr+HzPmiOC76dVaqm1y1yszqf17bGoFfMaJOavkJhnUHvjk10VCCmRdunedASO96RwPtdHyPk/A0OpKE/TunaMWq1jUtZLcCXm4yMxXweJeQKrseTYtdvvncSz5WlRljeYFZAOxv9bHlhyP+pcK+g9li4k5uMjMV8HiXkClkb8gqbMRdE9HvvnJhCQXu0MYWqsSdam1WNXi8R8fCTm6yAxT1D6w8zuZiGvx7W+LzUqg/RYJrn/tE+arLvXzDh6PEiwNzFn4GOL49rbHF0eyM8aOD/kXH8PYr5mnc7VprYo5tOyztl2s8S8NIK99eUPyyItyyHO3Jo7jys7wevxq//uMd/StHqI7tbFnHdUsJOC2ZVVh3zGoMYsZS4xIA8sqVH/oTzwHfnM6aw10D5ieXDXt3xQK+ak5XzvZpApcsV8Wq/+8c6fc9Up5WCGn6rP1uuvLebknXJSd+TFKisWazu1JMWchhLKkGWIJBls2f0yNSpimtapss/LI2rLGHRK0xpZzGtuUmM03F6N0r3syLpOzPBfjyUwcCJe4gvfB7Vi7pedv1OkxJx8lfqU8vcAX9Ystda2qTXEfDro+2nkWK/+kyXm/sVjRoEoXI0o+OYEbjozsD6rNZdWaXTe6vitiTnlaZ3tMIi3bt3sEQDQMWh/tZx2Sh3rwko7ZVMf1Iq5f05Ou4iJOVFibV/k2i1tvcWXWM31lxZzythL60irhe5ifufxn0/Os74rtVDkTKF7LLVgRHOlItIaAW5JzOksLR3Ot9qIrld9YrUi9OBp3czEN3ywBTHvMTi6+1+l9PJl6fWXFvOe7bbW146kmJcKc404hoy0LCfzea8Bg7RKB6xRxJwINibkNC6eJKU+nbHOl3pFAseVkJqG06m47jQffGYd6wx/lkTodKKY+OALrknk7yyVB9+WFPOQUQ7qzy8Hn1vHY3xXMjhybMiXXIvZAv2X4zD+z2eWEGMl119azGNt1/maPuT8nGozpe12SlLMrULGDKf3jJqttGoEOGQ4+bKKOc8B+Pk45eXYIVIdgDLgO/9cZzkdCBBm63zs1pefRBs2eeCYkHCQvxxos6FBjc6XKgt9JCREU1tTzCkH+Yz5M1aOEpGxfImwIdgpqE//XCzn3gEsLeb43l0T4Sbo4N5TylcxXzNA1LBpMQ+ldboLfC4xb4EG7ucBowGXRAZ0UCudnM5P/ZrnHht5yXRz2qF8y+nIoUEJYSkhtT69hpjniuiUkKDmzLjuBvSipD5DmpPT75YWc0dJn3FwTuimaU16u4zMWZcfTcx72anzZtyItG4g175lMSToqc4fEtGadUN8aglpKqILDSilQu4gH6GBZWkxz3njYoibf39z+YC2lWofVlReOpiA1aZosynWEvNa8KfVbms2E8yyZt5TzK1pOJ+X5itkNdsTtyzmGJ0uJogh3+U0+hBWhBHrfDRi/3isVkShplzWgOKeOK6F+rU66JJi3iLkQP1YwhgboNlW6h/f4kurTaXa6N7EHCy9pF2WkhTzGqELdapSIy3r+qQfW2stMa5ROvvYuphjsTxajSd3TTIErxn208RCAmZNx1sFCCwBYFkuhBVJttYvWKKypJj3ECIrOo7lx7oZ2OJL6/qxuoQ9irl17at/LP/t4e5izpOBvcSKhuNHCO4zHD09tsbctLF0JsHUvIW5xRxRpFwhrCWWHgJmCWloumhFxDXRiI8lAKGByooksZjvchlBzPFDyQzD2uVE3mqxypUKOvYo5uaMJqPefbqLOQIJPZZa3HLBNC23LBK70ZRrvzmKR6jBhixn3TCF5VPSRcxajcgllr/QtXsImBWZhSIpS/jde+pbCJXPwhL+Xh14BDGHknryjwv5vQS/b6bS3KKY07cIAEPG7hf/2rOIOVgOihlRntXAagyBIi0q0YlOjyUW0mKgKE2rxsk+lm96pJvDnNe2OkToxWTWAFpz49PCStsarEoGn1JGEXPLR9ZsK9Tf8UOLWWnGsM5ZUswRZ4IE2n0o/zk2m5iXRtlOdK3Ip9Sc6OJs0sNZPaLy2peBpaZ5OYwq5tZ0MdQh/OMwS3BrsDqRJaRWu67ZRWCRmwcf/5y1xdwKdqyboCExn8NirCXmte8UCtlsYm6NzikjoqZz4hDr+xLjt0AdPdLD6eStZimIbZGtSMxtMe9Fi5j3uHcAI4s5fdunx28E51hqd8waYt5jpcC32cS8dtRlEOgh6O4Xi7DaXwhy5n40o7YCchpGCom5IvMQ/jlbFPM1I/O7/7p3cUWbpcV8DiHHZhNzOpnlpByjsJxvPYSQYyytAB3PRQS1yzec1yLkOLiH4Iwq5g+MGzmhNfNascvBTxezsNqB1sxfx5qV54o5S6QIaS/L6XtLinnoaVfKff3Y7kmTJeJUvhfbzeKoWZJw5pZc2IvMkol1jG+nG58Xd3un1375+fkP7wbBce67kOFYnOqnVWo07B5sTczxIb5pJbfjg7WNrccShzXdp3wWVgcODT6ljCLmLbtZsB7BTwlLirn1jIKb+ZewuJiHHgrJNTLHFJaC0vjYjkMUhMMw3izG3+4lNRiRtHWDks6ZSguhd5E4UFmtN05zGkUOa4o54CP/+j2E1BLoUMe3hL9HVGxFS5TXIiT8rs20MIqYW30mtOvIKnOvexC5LCXmpgAfr13TdhYXczLZ6wchEFoqmQHCFZ5/+RunIsY5wkvHI5Ly0wIiTdJCIFpFHOsptmuLuTU7yXnvRYzQDTDKakEH84/tIaTmu0Ei6+BW2+ghQCOIeegp3RDWAN1j91cJS4m5tdSLrtWwuJhD7Vr1CMZWxl6sLebW9TF+MLsWazoe6wyItiWkoWWZHEJrmKEBBSwBoi5aBhUCCT9NbEkxZ2BsXTqzBsaYYFkDNNZrRpvDUmJu3W+pbbuLPjTkOHXAYyPxLzy69Zp6O9YWc8pizbJqy2k1bCwV4YbOq+n8CJc1OKTWwEMDW+39EaKs0ExwSTHHOLdW0K1BDosNjCd9MMreko9S1hTzmsicJauQz0opEnMIdcCRrWdUDmuLOdx/+uiNPGDcwCnpeKFOn9oPDKHOz6BSstQRE9CY+DhCO61KIi3KkuobS4u5s5LtlpQjVKc5A1zIB7WCTn5YEcByzl9KzK3jS2dDsZWORcQc5/ZYO9+L9Y7KYQtiDkEhPuYFAYg1TAQ09sRbjohCrEET6XAvJATfcYx1LpYjPkD9WiKA4YvYwMK5CFhoMJnaWmKOuXKE2jKfUxfW0srp/KN/cvpBzJdYqk6BNLhx7t/vItBIsZSYk0f/eAw/pwQ91XewnHr3KRZzsAo+qt1/9uii1P3YipjTIFMDM42ODohg0blYtkgJV+k7yUO/bOMM33Bd8oCRn5hgYDkdf0poujs1fEE+uD7/pvLg29Jr5v5nzvCNq1fKwd/Wcc5OEed53uAMOb7ke9+f5CPl05QPlxJziAky39FWSRdjoKScKb84W0zMgYJamRjJqJA52IqYQ46gl1jtj0vUPlRmGaJAuUrhRlRuZ4sZPrBEZUkxp3+mBskcQ8hDWxFjIGA9fDm1nKW7JcUcv7eWkTJZs9NFxZzOEhv9925zLK84tiTmQDlbxRR/pR61TtFDfFhaaak36qY04naGD9y+eiuNnHz557SIOSAUtYKD0JB2LS2+9I3y5OTFetYhR8ytp5dTYg45s5CQuTJZ23pn+XGKGNZoNorNsbwyhYqcXo93q6/Nk2/PijsfAoYI9xr4aNxMR/3rpAx/5nTaXELRdcjI89QHTLGn3/MUcg7+1J10c/DzSv4dpT7tXafoRK2ol9arH+XmRPNAWf085t6ELx20ToHPJG3r2tP6y6VJzMGaIuzdKNPcUIF0MBqrex3vVqDzuCdqaXhT3/A3HYS800nnyjcdhPR5gMyKtsgD31FXNbskcgnlAT/gH64f8gEdkmPwZa6fXm8X+YLqBNvlyYJj+M6q1yXqdNquuN70+ti0bbXU653Hfzldg3Qocy7Oh65dlcIyHedbbYXPKHtoYGq9NjSLObS+yXBLxhsahRBib3QRc0byEQTdvWpXCCH2Rhcxh70LuoRcCLFnuok5IIY9t5gtZa07IIQQYm26irmDBXxLNLdordvphBBiC8wi5lCzzW1J48GSnlvZhBBiTWYTc9jqskvJVjEhhNgDs4q5gyidfZ+WsC5pROM1jyYLIcTWWUTMHWyqtx4AmdsQ8dDPlwkhxAgsKuYOInWedvKfQuttXEPr4kKIy8AqYu5g3ZponV/s7yHspIGAE4VrTVwIcZlYVcx9iKJ5N4R7fwNLMtY7HPiM73iPAce2vMdBCCFGYFNiLoQQog6JuRBCDIDEXAghBkBiLoQQAyAxF0KIAZCYCyHEAEjMhRBiACTmQggxABJzIYQYAIm5EEIMgMRcCCEGQGIuhBADIDEXQogBkJgLIcQASMyFEGIAJOZCCDEAEnMhhNg9h8P/ARTUFPa4BgToAAAAAElFTkSuQmCC"
+                style="width:20%; margin-right: 17%" class="float-right">
+        </form>
+
+    </div>
+    <script>
+        function allFunctions() {
+         
+            //crearTablaPagos();
+        }
+
+
+        function crearTablaPagos(){
+            
+            }
+        window.onload = allFunctions;
+    </script>
+</body>
+
+</html>

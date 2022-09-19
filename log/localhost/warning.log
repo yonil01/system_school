@@ -1,0 +1,54 @@
+WARNING: 2022/05/29 15:42:24 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76797002, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/05/29 15:42:28 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/05/29 15:43:08 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76797002, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/05/29 15:43:31 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/05/29 15:43:50 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76797002, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/05/29 15:44:16 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/05/29 15:51:07 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 15:52:19 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:07:40 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:08:37 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:12:07 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:13:02 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:13:34 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:20:23 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:23:02 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:28:49 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:31:39 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 16:42:16 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/user/handler.go:42: The token was not sent: El suuario no existe!
+WARNING: 2022/05/29 17:56:24 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76797002, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/05/29 17:56:25 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/09/12 21:44:11 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76123293, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/09/12 21:44:11 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/09/12 21:44:34 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76502346, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/09/12 21:44:34 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/09/12 21:44:38 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76502346, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/09/12 21:44:38 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/09/12 21:45:03 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76502346, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/09/12 21:45:03 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/09/12 21:49:20 D:/Documentos/foro-hotel/foro-hotel-backend-master/internal/pwd/password.go:21: password is invalid: 76502346, crypto/bcrypt: hashedPassword is not the hash of the given password
+WARNING: 2022/09/12 21:49:35 D:/Documentos/foro-hotel/foro-hotel-backend-master/api/handle/login/handler.go:37: The token was not sent: usuario o contraseña incorrecta
+WARNING: 2022/09/16 00:39:40 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/classroom/handler.go:25: The token was not sent: Error en obtener el negocio!
+WARNING: 2022/09/16 00:39:47 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/classroom/handler.go:25: The token was not sent: Error en obtener el negocio!
+WARNING: 2022/09/16 00:40:23 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/classroom/handler.go:25: The token was not sent: Error en obtener el negocio!
+WARNING: 2022/09/16 00:53:20 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/subject/handler.go:25: The token was not sent: Error en obtener el negocio!
+WARNING: 2022/09/16 02:05:34 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/users/handler.go:33: The token was not sent: Error en obtener el negocio!
+WARNING: 2022/09/16 02:06:16 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/users/handler.go:33: The token was not sent: Error en obtener el negocio!
+WARNING: 2022/09/18 00:47:12 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:47:12 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:47:33 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:47:33 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:47:58 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:47:58 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:48:17 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:48:17 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:52:58 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 00:52:58 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 09:02:20 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 09:02:56 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 09:03:11 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 09:09:45 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 09:10:50 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@start_end', which was not supplied.
+WARNING: 2022/09/18 15:58:49 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 17:59:41 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 17:59:41 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.

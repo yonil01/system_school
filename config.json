@@ -1,0 +1,41 @@
+{
+    "app":{
+      "service_name": "localhost",
+      "port": 60000,
+      "allowed_domains": "*",
+      "path_log": "./log",
+      "log_review_interval":60,
+      "register_log": true,
+      "rsa_private_key": "../rsa/app.rsa",
+      "rsa_public_key": "../rsa/app.rsa.pub",
+      "logger_http": true,
+      "url_portal": "http://localhost:4200"
+    },
+  "template": {
+    "email_code": "send-code-confirm.gohtml",
+    "email_change_password": "send-change-password.gohtml"
+  },
+    "db": {
+      "engine": "sqlserver",
+      "server": "DESKTOP-IVU5SS3",
+      "port": 1433,
+      "name": "system_school",
+      "user": "sa",
+      "password": "root",
+      "instance": "",
+      "is_secure": false
+    },
+  "smtp": {
+    "port": 465,
+    "host": "smtp.gmail.com",
+    "email": "bjungleonlyone@gmail.com",
+    "password": "Passw0rd01*"
+  },
+    "s3" : { 
+      "bucket": "nexumtest"
+    },
+  "ws" : {
+    "url_api": "https://www.web.onpe.gob.pe/mpve_backend/personas/getCiudadano",
+    "token": "Dmfiv1Unnsv8I9EoXEzbyQExSD8Q1UY7viyyf_347vRCfO-1xGFvDddaxDAlvm0cZ8XgAKTaWclVFnnsGgoy4aLlBGB5m-E8rGw_ymEcCig1:eq4At-H2zqgXPrPnoiDGFZH0Fdx5a-1UiyVaR4nQlCvYZzAhzmvWxLwkUk6-yORYrBBxEnoG5sm-Hkiyc91so6-nHHxIeLee5p700KE47Cw1"
+   }
+  }
