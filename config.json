@@ -17,11 +17,11 @@
   },
     "db": {
       "engine": "sqlserver",
-      "server": "DESKTOP-IVU5SS3",
+      "server": "DBSCHOOLRAMON.mssql.somee.com",
       "port": 1433,
-      "name": "system_school",
-      "user": "sa",
-      "password": "root",
+      "name": "DBSCHOOLRAMON",
+      "user": "yonil01_SQLLogin_1",
+      "password": "1r82rovupu",
       "instance": "",
       "is_secure": false
     },

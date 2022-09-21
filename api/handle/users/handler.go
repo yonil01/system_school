@@ -62,7 +62,7 @@ func (h *handlerUser) updateUser(c *fiber.Ctx) error {
 	}
 
 	res.Data = us
-	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "Se actualizo Los datos")
 	res.Error = false
 	return c.Status(http.StatusOK).JSON(res)
 }
@@ -79,7 +79,7 @@ func (h *handlerUser) createUser(c *fiber.Ctx) error {
 
 	srvAuth := data.NewServerData(h.DB, nil, h.TxID)
 
-	us, err := srvAuth.SrvData.CreateUser(m.Dni, m.Username, m.Names, m.Lastnames, m.Sexo, m.Email, m.DateBirth, m.DateAdmission)
+	us, err := srvAuth.SrvData.CreateUser(m.Dni, m.Username, m.Names, m.Lastnames, m.Sexo, m.Email, m.DateBirth, m.DateAdmission, m.Role)
 	if err != nil {
 		// TODO implements code
 		logger.Warning.Printf("The token was not sent: %v", err)
@@ -88,7 +88,7 @@ func (h *handlerUser) createUser(c *fiber.Ctx) error {
 	}
 
 	res.Data = us
-	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "Creado Correctamente")
 	res.Error = false
 	return c.Status(http.StatusOK).JSON(res)
 }
@@ -114,7 +114,7 @@ func (h *handlerUser) deleteUser(c *fiber.Ctx) error {
 	}
 
 	res.Data = us
-	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "Se elimino con exito")
 	res.Error = false
 	return c.Status(http.StatusOK).JSON(res)
 }

@@ -52,3 +52,16 @@ WARNING: 2022/09/18 09:10:50 D:/Documentos/Proyecto SI/foro-hotel-backend-master
 WARNING: 2022/09/18 15:58:49 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
 WARNING: 2022/09/18 17:59:41 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
 WARNING: 2022/09/18 17:59:41 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_alumnos' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/18 20:42:08 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Incorrect syntax near 'execute'.
+WARNING: 2022/09/18 20:42:36 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Incorrect syntax near 'execute'.
+WARNING: 2022/09/18 22:05:21 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/09/18 22:05:25 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/09/18 22:05:26 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/09/18 22:05:48 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/09/18 22:43:15 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/users/handler.go:85: The token was not sent: Error en insertar el negocio!
+WARNING: 2022/09/18 22:52:20 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/users/handler.go:85: The token was not sent: Error en insertar el negocio!
+WARNING: 2022/09/18 23:01:26 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/users/handler.go:59: The token was not sent: Error en insertar el negocio!
+WARNING: 2022/09/18 23:03:13 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/users/handler.go:111: The token was not sent: Error en insertar el negocio!
+WARNING: 2022/09/19 00:33:43 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_payment' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/19 00:33:56 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_payment' expects parameter '@value', which was not supplied.
+WARNING: 2022/09/19 00:34:06 D:/Documentos/Proyecto SI/foro-hotel-backend-master/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'rtp_payment' expects parameter '@value', which was not supplied.

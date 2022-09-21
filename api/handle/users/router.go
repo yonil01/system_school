@@ -11,6 +11,7 @@ func RouterUser(app *fiber.App, db *sqlx.DB, txID string) {
 	v1 := api.Group("/v1")
 	autofill := v1.Group("/user")
 	autofill.Get("/all/:role", h.getUserAll)
+	autofill.Get("/:id", h.getUserAll)
 	autofill.Post("/update", h.updateUser)
 	autofill.Post("/create", h.createUser)
 	autofill.Post("/delete", h.deleteUser)

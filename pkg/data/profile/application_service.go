@@ -10,7 +10,7 @@ import (
 type PortServiceProfile interface {
 	GetUser(role int) ([]*models.User, error)
 	UpdateUser(matricula int64, dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time) (*models.User, error)
-	CreateUser(dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time) (*models.User, error)
+	CreateUser(dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time, role int) (*models.User, error)
 	DeleteUser(matricula int64, dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time) (*models.User, error)
 	GetClassrooms() ([]*models.Classroom, error)
 	UpdateClassroom(id int, name string, description string, nivel string, grado int, section string) (*models.Classroom, error)
@@ -67,7 +67,7 @@ func (s *service) UpdateUser(matricula int64, dni string, username string, names
 	return m, nil
 }
 
-func (s *service) CreateUser(dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time) (*models.User, error) {
+func (s *service) CreateUser(dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time, role int) (*models.User, error) {
 	student := models.User{
 		Dni:           dni,
 		Username:      username,
@@ -75,6 +75,7 @@ func (s *service) CreateUser(dni string, username string, names string, lastname
 		Lastnames:     lastname,
 		Sexo:          sexo,
 		Email:         email,
+		Role:          role,
 		DateAdmission: dateAdmission,
 		DateBirth:     dateBirth,
 		Status:        1,

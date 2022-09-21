@@ -12,6 +12,7 @@ type requestUser struct {
 	Names         string    `json:"names" db:"names" valid:"required"`
 	Lastnames     string    `json:"lastnames" db:"lastnames" valid:"required"`
 	Sexo          string    `json:"sexo" db:"sexo" valid:"required"`
+	Role          int       `json:"role" db:"role" valid:"required"`
 	DateAdmission time.Time `json:"date_admission" db:"date_admission" valid:"required"`
 	DateBirth     time.Time `json:"date_birth" db:"date_birth" valid:"required"`
 	Email         string    `json:"email" db:"email" valid:"required"`

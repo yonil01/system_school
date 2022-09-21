@@ -124,19 +124,19 @@ func (s *psql) getUser(role int) ([]*models.User, error) {
 }
 
 func (s *psql) updateUser(mdl models.User) (*models.User, error) {
-	const sqlUpdate = `UPDATE dbo.User SET dni = :dni, username = :username, sexo = :sexo, email = :email, date_birth = :date_birth, date_admission = :date_admission WHERE matricula = :matricula `
+	const sqlUpdate = `UPDATE dbo.users SET dni = :dni, username = :username, sexo = :sexo, email = :email, date_birth = :date_birth, date_admission = :date_admission WHERE matricula = :matricula `
 
 	_, err := s.DB.NamedExec(sqlUpdate, &mdl)
 	if err != nil {
-		logger.Error.Println(s.TxID, "-cound't insert User: %V", err)
-		return &mdl, errors.New("Error en insertar el negocio!")
+		logger.Error.Println(s.TxID, "-cound't update User: %V", err)
+		return &mdl, errors.New("-cound't update User: %V")
 	}
 
 	return &mdl, nil
 }
 
 func (s *psql) insertUser(mdl models.User) (*models.User, error) {
-	const sqlUpdate = `insert into dbo.User(dni,matricula,username,names,lastnames,sexo,status,date_admission, date_birth,email,is_delete,password,created_at, updated_at) values(:dni,(SELECT MAX(matricula) FROM User),:username,:names,:lastnames,:sexo,:status,:date_admission, :date_birth,:email,:is_delete,:password,:created_at, :updated_at)
+	const sqlUpdate = `insert into dbo.users(dni,matricula,username,names,lastnames,sexo,status,date_admission, date_birth,email,is_delete,password,created_at, updated_at, role) values(:dni,(SELECT MAX(matricula) FROM users),:username,:names,:lastnames,:sexo,:status,:date_admission, :date_birth,:email,:is_delete,:password,:created_at, :updated_at, :role)
 `
 	_, err := s.DB.NamedExec(sqlUpdate, &mdl)
 	if err != nil {
@@ -148,7 +148,7 @@ func (s *psql) insertUser(mdl models.User) (*models.User, error) {
 }
 
 func (s *psql) deleteUser(mdl models.User) (*models.User, error) {
-	const sqlUpdate = `DELETE FROM dbo.User WHERE matricula = :matricula `
+	const sqlUpdate = `DELETE FROM dbo.users WHERE matricula = :matricula `
 	_, err := s.DB.NamedExec(sqlUpdate, &mdl)
 	if err != nil {
 		logger.Error.Println(s.TxID, "-cound't insert User: %V", err)
