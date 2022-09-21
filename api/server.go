@@ -1,6 +1,5 @@
 package api
 
-
 import (
 	"fmt"
 	"log"
@@ -11,10 +10,10 @@ import (
 
 const (
 	version     = "0.0.1"
-	website     = "https://www.ecapture.com.co"
-	banner      = `Ecatch Ocr Api`
-	description = `Ecatch Ocr - %s - Port: %s
-by Ecapture 
+	website     = "https://www.tingosoft.com.co"
+	banner      = `System School Api`
+	description = `System School - %s - Port: %s
+by TingoSoft 
 Version: %s
 %s`
 )
