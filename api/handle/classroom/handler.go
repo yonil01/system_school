@@ -1,12 +1,14 @@
 package classroom
 
 import (
+	"fmt"
 	"foro-hotel/internal/logger"
 	"foro-hotel/internal/msg"
 	"foro-hotel/pkg/data"
 	"github.com/gofiber/fiber/v2"
 	"github.com/jmoiron/sqlx"
 	"net/http"
+	"time"
 )
 
 type handlerClassroom struct {
@@ -104,6 +106,10 @@ func (h *handlerClassroom) deleteClassroom(c *fiber.Ctx) error {
 		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
 		return c.Status(http.StatusAccepted).JSON(res)
 	}
+
+	date := time.Now()
+
+	fmt.Sprintf("%s-%s-%s %s-%s-%s", date.Day(), date.Month(), date.Year(), date.Hour(), date.Minute(), "0:0")
 
 	res.Data = us
 	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")

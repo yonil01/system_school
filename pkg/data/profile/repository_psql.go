@@ -302,15 +302,14 @@ func (s psql) ExecuteSP(m *models.Report) ([]map[string]interface{}, error) {
 	r.WriteString(fmt.Sprintf(`%s %s `, sqlserverExecuteSP, m.Procedure))
 	vs := make([]interface{}, 0)
 	for i, v := range m.Parameters {
-		if len(v) > 0 {
-			valueClear := strings.Replace(v, `'`, "", -1)
-			_, err := r.WriteString(fmt.Sprintf(`@%s='%s',`, i, valueClear))
-			if err != nil {
-				logger.Error.Printf("agregando parametros a la ejecucion del SP en sqlserverExecuteSP: %v", err)
-				return rs, err
-			}
-			vs = append(vs, sql.Named(fmt.Sprintf("%s", i), v))
+		valueClear := strings.Replace(v, `'`, "", -1)
+		_, err := r.WriteString(fmt.Sprintf(`@%s='%s',`, i, valueClear))
+		if err != nil {
+			logger.Error.Printf("agregando parametros a la ejecucion del SP en sqlserverExecuteSP: %v", err)
+			return rs, err
 		}
+		vs = append(vs, sql.Named(fmt.Sprintf("%s", i), v))
+
 	}
 
 	r.Truncate(r.Len() - 1)
