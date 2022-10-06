@@ -13,9 +13,9 @@ type PortServiceProfile interface {
 	CreateUser(dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time, role int) (*models.User, error)
 	DeleteUser(matricula int64, dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time) (*models.User, error)
 	GetClassrooms() ([]*models.Classroom, error)
-	UpdateClassroom(id int, name string, description string, nivel string, grado int, section string) (*models.Classroom, error)
-	CreateClassroom(name string, description string, nivel string, grado int, section string) (*models.Classroom, error)
-	DeleteClassroom(id int, name string, description string, nivel string, grado int, section string) (*models.Classroom, error)
+	UpdateClassroom(id int, name string, description string, nivel string, _range string) (*models.Classroom, error)
+	CreateClassroom(name string, description string, nivel string, _range string) (*models.Classroom, error)
+	DeleteClassroom(id int, name string, description string, nivel string, _range string) (*models.Classroom, error)
 	GetSubjects() ([]*models.Subject, error)
 	UpdateSubject(id int, name string, description string, status int) (*models.Subject, error)
 	CreateSubject(name string, description string) (*models.Subject, error)
@@ -25,6 +25,10 @@ type PortServiceProfile interface {
 	CreatePayment(name string, description string, motivo string, status int, datePayment time.Time, userMatricula int64, amount float64, role int) (*models.Payment, error)
 	DeletePayment(id int, name string, description string, motivo string, status int, datePayment time.Time, userMatricula int64, amount float64, role int) (*models.Payment, error)
 	ExecuteSP(procedure string, parameters map[string]string) ([]map[string]interface{}, error)
+	GetSections() ([]*models.Sections, error)
+	UpdateSection(id int, name string, gradoId int) (*models.Sections, error)
+	CreateSection(name string, gradoId int) (*models.Sections, error)
+	DeleteSection(id int, name string, gradoId int) (*models.Sections, error)
 }
 
 type service struct {
@@ -120,14 +124,13 @@ func (s *service) GetClassrooms() ([]*models.Classroom, error) {
 	return m, nil
 }
 
-func (s *service) UpdateClassroom(id int, name string, description string, nivel string, grado int, section string) (*models.Classroom, error) {
+func (s *service) UpdateClassroom(id int, name string, description string, nivel string, _range string) (*models.Classroom, error) {
 	classroom := models.Classroom{
 		Id:          id,
 		Name:        name,
 		Description: description,
 		Nivel:       nivel,
-		Grado:       grado,
-		Section:     section,
+		Range:       _range,
 		UpdatedAt:   time.Now(),
 	}
 
@@ -139,14 +142,13 @@ func (s *service) UpdateClassroom(id int, name string, description string, nivel
 	return m, nil
 }
 
-func (s *service) CreateClassroom(name string, description string, nivel string, grado int, section string) (*models.Classroom, error) {
+func (s *service) CreateClassroom(name string, description string, nivel string, _range string) (*models.Classroom, error) {
 	student := models.Classroom{
 		Name:        name,
 		Description: description,
 		Nivel:       nivel,
+		Range:       _range,
 		Status:      1,
-		Grado:       grado,
-		Section:     section,
 		CreatedAt:   time.Now(),
 		UpdatedAt:   time.Now(),
 	}
@@ -158,14 +160,13 @@ func (s *service) CreateClassroom(name string, description string, nivel string,
 	return m, nil
 }
 
-func (s *service) DeleteClassroom(id int, name string, description string, nivel string, grado int, section string) (*models.Classroom, error) {
+func (s *service) DeleteClassroom(id int, name string, description string, nivel string, _range string) (*models.Classroom, error) {
 	classroom := models.Classroom{
 		Id:          id,
 		Name:        name,
 		Description: description,
 		Nivel:       nivel,
-		Grado:       grado,
-		Section:     section,
+		Range:       _range,
 	}
 	m, err := s.repository.deleteClassroom(classroom)
 	if err != nil {
@@ -312,6 +313,65 @@ func (s *service) ExecuteSP(procedure string, parameters map[string]string) ([]m
 		Parameters: parameters,
 	}
 	m, err := s.repository.ExecuteSP(report)
+	if err != nil {
+		logger.Error.Println(s.txID, " - couldn't getByNickName row:", err)
+		return nil, err
+	}
+	return m, nil
+}
+
+func (s *service) GetSections() ([]*models.Sections, error) {
+	m, err := s.repository.getSections()
+	if err != nil {
+		logger.Error.Println(s.txID, " - couldn't getByNickName row:", err)
+		return nil, err
+	}
+	return m, nil
+}
+
+func (s *service) UpdateSection(id int, name string, gradoId int) (*models.Sections, error) {
+	classroom := models.Sections{
+		Id:        id,
+		Name:      name,
+		GradoId:   gradoId,
+		Status:    1,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
+	}
+
+	m, err := s.repository.updateSection(classroom)
+	if err != nil {
+		logger.Error.Println(s.txID, " - couldn't getByNickName row:", err)
+		return nil, err
+	}
+	return m, nil
+}
+
+func (s *service) CreateSection(name string, gradoId int) (*models.Sections, error) {
+	classroom := models.Sections{
+		Name:      name,
+		GradoId:   gradoId,
+		Status:    1,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
+	}
+	m, err := s.repository.insertSection(classroom)
+	if err != nil {
+		logger.Error.Println(s.txID, " - couldn't getByNickName row:", err)
+		return nil, err
+	}
+	return m, nil
+}
+
+func (s *service) DeleteSection(id int, name string, gradoId int) (*models.Sections, error) {
+	classroom := models.Sections{
+		Name:      name,
+		GradoId:   gradoId,
+		Status:    1,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
+	}
+	m, err := s.repository.deleteSection(classroom)
 	if err != nil {
 		logger.Error.Println(s.txID, " - couldn't getByNickName row:", err)
 		return nil, err

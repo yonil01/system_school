@@ -60,7 +60,8 @@ func connectionString() string {
 		return fmt.Sprintf("dbname=%s user=%s password=%s host=%s port=%d sslmode=disable", database, username, password, host, port)
 	case "sqlserver":
 		return fmt.Sprintf(
-			"server=%s\\%s;User id=%s;database=%s;password=%s;port=%d", host, instance, username, database, password, port)
+			"sqlserver:%s//%s:%s@%s:%d?database=%s&encrypt=disable", instance, username, password, host, port, database)
+
 	}
 	logger.Error.Printf("database engine is not configured")
 	return ""

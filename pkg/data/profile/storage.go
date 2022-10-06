@@ -35,6 +35,10 @@ type ServicesDataRepository interface {
 	insertPayment(mdl models.Payment) (*models.Payment, error)
 	deletePayment(mdl models.Payment) (*models.Payment, error)
 	ExecuteSP(m *models.Report) ([]map[string]interface{}, error)
+	getSections() ([]*models.Sections, error)
+	updateSection(mdl models.Sections) (*models.Sections, error)
+	insertSection(mdl models.Sections) (*models.Sections, error)
+	deleteSection(mdl models.Sections) (*models.Sections, error)
 }
 
 func FactoryStorage(db *sqlx.DB, user *models.User, txID string) ServicesDataRepository {

@@ -5,6 +5,7 @@ import (
 	doctype "foro-hotel/api/handle/doctypes"
 	Payment "foro-hotel/api/handle/payment-debt"
 	Report "foro-hotel/api/handle/report"
+	"foro-hotel/api/handle/sections"
 	Subject "foro-hotel/api/handle/subject"
 	user "foro-hotel/api/handle/users"
 	"github.com/ansrivas/fiberprometheus/v2"
@@ -53,4 +54,5 @@ func loadRoutes(app *fiber.App, db *sqlx.DB, TxID string) {
 	Subject.RouterSubject(app, db, TxID)
 	Payment.RouterPayment(app, db, TxID)
 	Report.RouterReport(app, db, TxID)
+	sections.RouterSection(app, db, TxID)
 }

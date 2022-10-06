@@ -51,9 +51,8 @@ type Classroom struct {
 	Name        string    `json:"name" db:"name" valid:"required"`
 	Description string    `json:"description" db:"description" valid:"required"`
 	Nivel       string    `json:"nivel" db:"nivel" valid:"required"`
+	Range       string    `json:"range" db:"range" valid:"required"`
 	Status      int       `json:"status" db:"status" valid:"required"`
-	Grado       int       `json:"grado" db:"grado" valid:"required"`
-	Section     string    `json:"section" db:"section" valid:"required"`
 	CreatedAt   time.Time `json:"created_at" db:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at" db:"updated_at"`
 }
@@ -82,4 +81,13 @@ type Payment struct {
 	IsDelete      int       `json:"is_delete" db:"is_delete" valid:"required"`
 	CreatedAt     time.Time `json:"created_at" db:"created_at"`
 	UpdatedAt     time.Time `json:"updated_at" db:"updated_at"`
+}
+
+type Sections struct {
+	Id        int       `json:"id" db:"id" valid:"required"`
+	Name      string    `json:"name" db:"name" valid:"required"`
+	GradoId   int       `json:"grado_id" db:"grado_id" valid:"required"`
+	Status    int       `json:"status" db:"status" valid:"required"`
+	CreatedAt time.Time `json:"created_at" db:"created_at"`
+	UpdatedAt time.Time `json:"updated_at" db:"updated_at"`
 }

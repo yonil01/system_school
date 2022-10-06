@@ -1,4 +1,4 @@
-package classroom
+package sections
 
 import (
 	"fmt"
@@ -11,17 +11,17 @@ import (
 	"time"
 )
 
-type handlerClassroom struct {
+type handlerSection struct {
 	DB   *sqlx.DB
 	TxID string
 }
 
-func (h *handlerClassroom) getClassroomAll(c *fiber.Ctx) error {
-	res := responseClassrooms{Error: true}
+func (h *handlerSection) getSectionAll(c *fiber.Ctx) error {
+	res := responseSections{Error: true}
 
 	srvAuth := data.NewServerData(h.DB, nil, h.TxID)
 
-	us, err := srvAuth.SrvData.GetClassrooms()
+	us, err := srvAuth.SrvData.GetSections()
 	if err != nil {
 		// TODO implements code
 		logger.Warning.Printf("The token was not sent: %v", err)
@@ -35,9 +35,9 @@ func (h *handlerClassroom) getClassroomAll(c *fiber.Ctx) error {
 	return c.Status(http.StatusOK).JSON(res)
 }
 
-func (h *handlerClassroom) updateClassroom(c *fiber.Ctx) error {
+func (h *handlerSection) updateSection(c *fiber.Ctx) error {
 	res := responseUpdate{Error: true}
-	m := requestClassroom{}
+	m := requestSection{}
 	err := c.BodyParser(&m)
 	if err != nil {
 		logger.Error.Printf("couldn't bind model login: %v", err)
@@ -47,7 +47,7 @@ func (h *handlerClassroom) updateClassroom(c *fiber.Ctx) error {
 
 	srvAuth := data.NewServerData(h.DB, nil, h.TxID)
 
-	us, err := srvAuth.SrvData.UpdateClassroom(m.Id, m.Name, m.Description, m.Nivel, m.Range)
+	us, err := srvAuth.SrvData.UpdateSection(m.Id, m.Name, m.GradoId)
 	if err != nil {
 		// TODO implements code
 		logger.Warning.Printf("The token was not sent: %v", err)
@@ -61,9 +61,9 @@ func (h *handlerClassroom) updateClassroom(c *fiber.Ctx) error {
 	return c.Status(http.StatusOK).JSON(res)
 }
 
-func (h *handlerClassroom) createClassroom(c *fiber.Ctx) error {
+func (h *handlerSection) createSection(c *fiber.Ctx) error {
 	res := responseUpdate{Error: true}
-	m := requestClassroom{}
+	m := requestSection{}
 	err := c.BodyParser(&m)
 	if err != nil {
 		logger.Error.Printf("couldn't bind model login: %v", err)
@@ -73,7 +73,7 @@ func (h *handlerClassroom) createClassroom(c *fiber.Ctx) error {
 
 	srvAuth := data.NewServerData(h.DB, nil, h.TxID)
 
-	us, err := srvAuth.SrvData.CreateClassroom(m.Name, m.Description, m.Nivel, m.Range)
+	us, err := srvAuth.SrvData.CreateSection(m.Name, m.GradoId)
 	if err != nil {
 		// TODO implements code
 		logger.Warning.Printf("The token was not sent: %v", err)
@@ -87,9 +87,9 @@ func (h *handlerClassroom) createClassroom(c *fiber.Ctx) error {
 	return c.Status(http.StatusOK).JSON(res)
 }
 
-func (h *handlerClassroom) deleteClassroom(c *fiber.Ctx) error {
+func (h *handlerSection) deleteSection(c *fiber.Ctx) error {
 	res := responseUpdate{Error: true}
-	m := requestClassroom{}
+	m := requestSection{}
 	err := c.BodyParser(&m)
 	if err != nil {
 		logger.Error.Printf("couldn't bind model login: %v", err)
@@ -99,7 +99,7 @@ func (h *handlerClassroom) deleteClassroom(c *fiber.Ctx) error {
 
 	srvAuth := data.NewServerData(h.DB, nil, h.TxID)
 
-	us, err := srvAuth.SrvData.DeleteClassroom(m.Id, m.Name, m.Description, m.Nivel, m.Range)
+	us, err := srvAuth.SrvData.DeleteSection(m.Id, m.Name, m.GradoId)
 	if err != nil {
 		// TODO implements code
 		logger.Warning.Printf("The token was not sent: %v", err)

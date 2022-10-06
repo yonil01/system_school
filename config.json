@@ -25,6 +25,16 @@
       "instance": "",
       "is_secure": false
     },
+  "db_": {
+    "engine": "sqlserver",
+    "server": "34.238.213.186",
+    "port": 1433,
+    "name": "ecatch-elecciones-mti-e3",
+    "user": "sa",
+    "password": "E-capture",
+    "instance": "",
+    "is_secure": false
+  },
   "smtp": {
     "port": 465,
     "host": "smtp.gmail.com",

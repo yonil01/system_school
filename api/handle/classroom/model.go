@@ -9,8 +9,7 @@ type requestClassroom struct {
 	Name        string `json:"dni" db:"dni" valid:"required"`
 	Description string `json:"username" db:"username" valid:"required"`
 	Nivel       string `json:"names" db:"names" valid:"required"`
-	Grado       int    `json:"lastnames" db:"lastnames" valid:"required"`
-	Section     string `json:"sexo" db:"sexo" valid:"required"`
+	Range       string `json:"range" db:"range" valid:"required"`
 }
 
 type responseClassrooms struct {

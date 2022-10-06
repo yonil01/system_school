@@ -160,7 +160,7 @@ func (s *psql) deleteUser(mdl models.User) (*models.User, error) {
 
 func (s *psql) getClassrooms() ([]*models.Classroom, error) {
 	var mdl []*models.Classroom
-	query := `SELECT id, name, description, nivel, status, grado, section, created_at, updated_at FROM dbo.aula`
+	query := `SELECT id, name, description, nivel, range, status, created_at, updated_at FROM dbo.grados`
 	err := s.DB.Select(&mdl, query)
 	if err != nil {
 		return nil, errors.New("Error en obtener el negocio!")
@@ -353,6 +353,52 @@ func (s psql) ExecuteSP(m *models.Report) ([]map[string]interface{}, error) {
 		rs = append(rs, r)
 	}
 	return rs, nil
+}
+
+func (s *psql) getSections() ([]*models.Sections, error) {
+	var mdl []*models.Sections
+	query := `SELECT id, name, grado_id, status, created_at, updated_at FROM dbo.section`
+	err := s.DB.Select(&mdl, query)
+	if err != nil {
+		return nil, errors.New("Error en obtener el negocio!")
+	}
+
+	return mdl, nil
+}
+
+func (s *psql) updateSection(mdl models.Sections) (*models.Sections, error) {
+	const sqlUpdate = `UPDATE dbo.aula SET name = :name, description = :description, nivel = :nivel, grado = :grado, section = :section WHERE section = :matricula `
+
+	_, err := s.DB.NamedExec(sqlUpdate, &mdl)
+	if err != nil {
+		logger.Error.Println(s.TxID, "-cound't insert User: %V", err)
+		return &mdl, errors.New("Error en insertar el negocio!")
+	}
+
+	return &mdl, nil
+}
+
+func (s *psql) insertSection(mdl models.Sections) (*models.Sections, error) {
+	const sqlUpdate = `insert into dbo.section(name,description,nivel,status,grado,section,created_at, updated_at) values(:dni,(SELECT MAX(matricula) FROM User),:username,:names,:lastnames,:sexo,:status,:date_admission, :date_birth,:email,:is_delete,:password,:created_at, :updated_at)
+`
+	_, err := s.DB.NamedExec(sqlUpdate, &mdl)
+	if err != nil {
+		logger.Error.Println(s.TxID, "-cound't insert User: %V", err)
+		return &mdl, errors.New("Error en insertar el negocio!")
+	}
+
+	return &mdl, nil
+}
+
+func (s *psql) deleteSection(mdl models.Sections) (*models.Sections, error) {
+	const sqlUpdate = `DELETE FROM dbo.section WHERE id = :id `
+	_, err := s.DB.NamedExec(sqlUpdate, &mdl)
+	if err != nil {
+		logger.Error.Println(s.TxID, "-cound't insert User: %V", err)
+		return &mdl, errors.New("Error en insertar el negocio!")
+	}
+
+	return &mdl, nil
 }
 
 func newDataPsqlRepository(db *sqlx.DB, user *models.User, txID string) *psql {
