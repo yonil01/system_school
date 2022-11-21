@@ -22,13 +22,10 @@ const (
 	sqlserverExecuteSP = `execute`
 )
 
-func (s *psql) getUserbyId(id string) (*models.User, int, error) {
-	document_id, _ := strconv.Atoi(id)
-	mdl := models.User{}
-	user_id := 1
-	const sqlGetInfoKeywords = ` EXECUTE dbo.Get_User @document_id= %d, @user_id= %d `
-	sqlExecute := fmt.Sprintf(sqlGetInfoKeywords, document_id, user_id)
-	err := s.DB.Get(&mdl, sqlExecute, sql.Named("user_id", user_id))
+func (s *psql) getUserById(id int) (*models.User, int, error) {
+	var mdl models.User
+	const sqlGetInfoKeywords = ` SELECT id, dni, matricula, username, names, lastnames, email, sexo, status, date_admission, date_birth from dbo.users WHERE id = @id`
+	err := s.DB.Get(&mdl, sqlGetInfoKeywords, sql.Named("id", id))
 	if err != nil {
 		return nil, 1, errors.New("El suuario no existe!")
 	}

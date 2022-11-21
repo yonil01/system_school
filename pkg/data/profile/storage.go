@@ -11,7 +11,7 @@ const (
 )
 
 type ServicesDataRepository interface {
-	getUserbyId(string) (*models.User, int, error)
+	getUserById(int) (*models.User, int, error)
 	getComentariosProcedure(document_id string) ([]*models.Comentario, int, error)
 	getPdf(text_hash string) (*models.Reservacion, int, error)
 	getReservacionByDocument(id string) ([]*models.Reservacion, int, error)

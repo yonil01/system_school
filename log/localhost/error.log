@@ -3939,3 +3939,110 @@ ERROR: 2022/10/06 16:11:58 D:/Documentos/Proyecto SI/system_school_back/pkg/data
 ERROR: 2022/10/06 16:11:58 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:317: 46729da4-63c5-41c2-a8d8-c95159b444db  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
 ERROR: 2022/10/06 16:11:58 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:326: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
 ERROR: 2022/10/06 16:11:58 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:317: 46729da4-63c5-41c2-a8d8-c95159b444db  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:09 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:09 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:10 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:10 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:15 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:15 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:15 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:15 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:19 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:19 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:19 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:19 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:27 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:27 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:27 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 00:23:27 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 83229a9f-239f-4783-9653-41d4e01c5f51  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:45 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:45 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:45 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:45 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:56 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:56 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:57 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:52:57 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:53:06 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:53:06 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:53:06 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 17:53:06 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 18:12:31 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 18:12:31 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 18:12:31 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 18:12:31 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: 22fb138f-5b61-4109-984d-79dadb51b74b  - couldn't getByNickName row: mssql: Must declare the scalar variable "@value".
+ERROR: 2022/11/12 18:13:10 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: json: cannot unmarshal "124}}" into Go struct field Report.Modelmap[string]string.parameters.value of type string
+ERROR: 2022/11/13 20:45:44 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Procedure or function 'getMateriaByUser' expects parameter '@value', which was not supplied.
+ERROR: 2022/11/13 20:45:44 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: f793afe3-a7f4-48d4-82a9-e57f0def9034  - couldn't getByNickName row: mssql: Procedure or function 'getMateriaByUser' expects parameter '@value', which was not supplied.
+ERROR: 2022/11/13 20:47:09 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Procedure or function 'InsertCursoUser' expects parameter '@curso_id', which was not supplied.
+ERROR: 2022/11/13 20:47:09 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: f793afe3-a7f4-48d4-82a9-e57f0def9034  - couldn't getByNickName row: mssql: Procedure or function 'InsertCursoUser' expects parameter '@curso_id', which was not supplied.
+ERROR: 2022/11/13 20:53:36 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: json: cannot unmarshal "1}}" into Go struct field Report.Modelmap[string]string.parameters.curso_id of type string
+ERROR: 2022/11/13 20:55:40 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Procedure or function 'InsertCursoUser' expects parameter '@user_id', which was not supplied.
+ERROR: 2022/11/13 20:55:40 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: f793afe3-a7f4-48d4-82a9-e57f0def9034  - couldn't getByNickName row: mssql: Procedure or function 'InsertCursoUser' expects parameter '@user_id', which was not supplied.
+ERROR: 2022/11/13 20:56:45 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/repository_psql.go:323: ejecutando sqlserverExecuteSP user: mssql: Procedure or function 'InsertCursoUser' expects parameter '@user_id', which was not supplied.
+ERROR: 2022/11/13 20:56:45 D:/Documentos/Proyecto SI/system_school_back/pkg/data/profile/application_service.go:327: f793afe3-a7f4-48d4-82a9-e57f0def9034  - couldn't getByNickName row: mssql: Procedure or function 'InsertCursoUser' expects parameter '@user_id', which was not supplied.
+ERROR: 2022/11/13 21:15:00 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: json: cannot unmarshal "2}}" into Go struct field Report.Modelmap[string]string.parameters.option of type string
+ERROR: 2022/11/13 22:45:45 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:49:05 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:49:39 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:50:52 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:52:51 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:54:20 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:55:46 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:56:44 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 22:57:52 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:00:38 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:02:09 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:03:40 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:05:47 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:06:13 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:06:56 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:16:26 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:16:42 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:16:48 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:16:59 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:20:55 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:21:52 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:23:36 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:25:57 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:27:54 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:28:29 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:29:03 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:29:36 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:30:15 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:30:44 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:31:10 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:31:32 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:32:01 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:32:50 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:33:09 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:33:14 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:34:25 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:37:43 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:38:22 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:38:38 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:38:43 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:39:39 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:40:37 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:41:06 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:44:00 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:45:07 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/13 23:52:35 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 00:07:45 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 00:08:29 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 00:20:37 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 00:21:22 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 00:22:34 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 00:23:30 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 01:12:53 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 01:23:33 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 01:25:09 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 01:25:36 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 01:25:56 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 17:17:10 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 17:17:43 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 17:43:41 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:22: couldn't bind model login: Unprocessable Entity
+ERROR: 2022/11/14 18:52:41 D:/Documentos/Proyecto SI/system_school_back/pkg/entity/file/application_service.go:39: 40f685b0-9a7e-4934-91e3-af4e713fcac1  - couldn't create File : open files/0001_1.png: The system cannot find the path specified.
+ERROR: 2022/11/14 20:07:51 D:/Documentos/Proyecto SI/system_school_back/pkg/wf/worker/application_service.go:30: 9921b1a0-9b94-41cd-adee-654749764b8a  - don't meet validations: is_delete: non zero value required;status: non zero value required
+ERROR: 2022/11/14 20:08:09 D:/Documentos/Proyecto SI/system_school_back/pkg/wf/worker/application_service.go:30: 9921b1a0-9b94-41cd-adee-654749764b8a  - don't meet validations: is_delete: non zero value required;status: non zero value required
+ERROR: 2022/11/14 20:10:03 D:/Documentos/Proyecto SI/system_school_back/pkg/wf/worker/application_service.go:30: b3687d84-d3cf-4a37-a34c-e57e88e17652  - don't meet validations: is_delete: non zero value required

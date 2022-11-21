@@ -1850,3 +1850,27 @@ WARNING: 2022/10/06 16:00:31 D:/Documentos/Proyecto SI/system_school_back/api/ha
 WARNING: 2022/10/06 16:00:32 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
 WARNING: 2022/10/06 16:11:58 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
 WARNING: 2022/10/06 16:11:58 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:09 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:10 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:15 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:15 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:19 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:19 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:27 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 00:23:27 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 17:52:45 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 17:52:45 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 17:52:56 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 17:52:57 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 17:53:06 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 17:53:06 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 18:12:31 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/12 18:12:31 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Must declare the scalar variable "@value".
+WARNING: 2022/11/13 20:45:44 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'getMateriaByUser' expects parameter '@value', which was not supplied.
+WARNING: 2022/11/13 20:47:09 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'InsertCursoUser' expects parameter '@curso_id', which was not supplied.
+WARNING: 2022/11/13 20:55:40 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'InsertCursoUser' expects parameter '@user_id', which was not supplied.
+WARNING: 2022/11/13 20:56:45 D:/Documentos/Proyecto SI/system_school_back/api/handle/report/handler.go:32: The token was not sent: mssql: Procedure or function 'InsertCursoUser' expects parameter '@user_id', which was not supplied.
+WARNING: 2022/11/14 18:52:41 D:/Documentos/Proyecto SI/system_school_back/api/handle/users/handler.go:197: The token was not sent: open files/0001_1.png: The system cannot find the path specified.
+WARNING: 2022/11/14 20:07:51 D:/Documentos/Proyecto SI/system_school_back/api/handle/worker/handler.go:77: The token was not sent: is_delete: non zero value required;status: non zero value required
+WARNING: 2022/11/14 20:08:09 D:/Documentos/Proyecto SI/system_school_back/api/handle/worker/handler.go:77: The token was not sent: is_delete: non zero value required;status: non zero value required
+WARNING: 2022/11/14 20:10:03 D:/Documentos/Proyecto SI/system_school_back/api/handle/worker/handler.go:77: The token was not sent: is_delete: non zero value required

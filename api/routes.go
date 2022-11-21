@@ -8,6 +8,7 @@ import (
 	"foro-hotel/api/handle/sections"
 	Subject "foro-hotel/api/handle/subject"
 	user "foro-hotel/api/handle/users"
+	"foro-hotel/api/handle/worker"
 	"github.com/ansrivas/fiberprometheus/v2"
 	swagger "github.com/arsmn/fiber-swagger/v2"
 	"github.com/gofiber/fiber/v2"
@@ -55,4 +56,5 @@ func loadRoutes(app *fiber.App, db *sqlx.DB, TxID string) {
 	Payment.RouterPayment(app, db, TxID)
 	Report.RouterReport(app, db, TxID)
 	sections.RouterSection(app, db, TxID)
+	worker.RouterWorker(app, db, TxID)
 }

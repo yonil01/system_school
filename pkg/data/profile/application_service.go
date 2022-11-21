@@ -9,6 +9,7 @@ import (
 
 type PortServiceProfile interface {
 	GetUser(role int) ([]*models.User, error)
+	GetUserById(id int) (*models.User, int, error)
 	UpdateUser(matricula int64, dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time) (*models.User, error)
 	CreateUser(dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time, role int) (*models.User, error)
 	DeleteUser(matricula int64, dni string, username string, names string, lastname string, sexo string, email string, dateBirth time.Time, dateAdmission time.Time) (*models.User, error)
@@ -36,6 +37,15 @@ type service struct {
 	user       *models.User
 	txID       string
 	db         *sqlx.DB
+}
+
+func (s *service) GetUserById(id int) (*models.User, int, error) {
+	m, cod, err := s.repository.getUserById(id)
+	if err != nil {
+		logger.Error.Println(s.txID, " - couldn't getByNickName row:", err)
+		return nil, cod, err
+	}
+	return m, cod, nil
 }
 
 func NewProfileService(repository ServicesDataRepository, user *models.User, TxID string, Db *sqlx.DB) PortServiceProfile {

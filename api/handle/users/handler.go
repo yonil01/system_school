@@ -4,6 +4,8 @@ import (
 	"foro-hotel/internal/logger"
 	"foro-hotel/internal/msg"
 	"foro-hotel/pkg/data"
+	"foro-hotel/pkg/entity"
+	"foro-hotel/pkg/entity/file"
 	"github.com/gofiber/fiber/v2"
 	"github.com/jmoiron/sqlx"
 	"net/http"
@@ -16,7 +18,7 @@ type handlerUser struct {
 }
 
 func (h *handlerUser) getUserAll(c *fiber.Ctx) error {
-	res := responseUser{Error: true}
+	res := responseUsers{Error: true}
 
 	srvAuth := data.NewServerData(h.DB, nil, h.TxID)
 
@@ -115,6 +117,92 @@ func (h *handlerUser) deleteUser(c *fiber.Ctx) error {
 
 	res.Data = us
 	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "Se elimino con exito")
+	res.Error = false
+	return c.Status(http.StatusOK).JSON(res)
+}
+
+func (h *handlerUser) getUserById(c *fiber.Ctx) error {
+	res := responseUser{Error: true}
+
+	srvAuth := data.NewServerData(h.DB, nil, h.TxID)
+
+	id, err := strconv.Atoi(c.Params("id"))
+	if err != nil {
+		// TODO implements code
+		logger.Warning.Printf("The token was not sent: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+	us, cod, err := srvAuth.SrvData.GetUserById(id)
+	if err != nil {
+		// TODO implements code
+		logger.Warning.Printf("The token was not sent: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+
+	res.Data = us
+	res.Code, res.Type, res.Msg = msg.GetByCode(cod, "", "")
+	res.Error = false
+	return c.Status(http.StatusOK).JSON(res)
+}
+
+// TODO REPRESENTANTE
+
+func (h *handlerUser) createRepresentante(c *fiber.Ctx) error {
+	res := responsRepresentante{Error: true}
+	m := RequestRepresentante{}
+	err := c.BodyParser(&m)
+	if err != nil {
+		logger.Error.Printf("couldn't bind model login: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+
+	srvEntity := entity.NewServerEntity(h.DB, nil, h.TxID)
+
+	rep, cod, err := srvEntity.SrvRepresentante.CreateRepresentante(m.MatriculaUser, m.TypeRepresentante, m.Notification, m.Dni, m.Direction, m.Names, m.Lastnames, m.CellPhone, m.Email, 1, 0)
+	if err != nil {
+		// TODO implements code
+		logger.Warning.Printf("The token was not sent: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(cod, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+
+	res.Data = rep
+	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "Creado Correctamente")
+	res.Error = false
+	return c.Status(http.StatusOK).JSON(res)
+}
+
+//TODO FILE
+func (h *handlerUser) uploadFileAnexos(c *fiber.Ctx) error {
+	res := responseFiles{Error: true}
+	m := RequestFile{}
+	err := c.BodyParser(&m)
+	if err != nil {
+		logger.Error.Printf("couldn't bind model login: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+
+	srvEntity := entity.NewServerEntity(h.DB, nil, h.TxID)
+
+	var files []*file.File
+
+	for _, file := range m.Files {
+		f, cod, err := srvEntity.SrvFile.CreateFile(file.MatriculaUser, file.Name, file.Description, "files/", file.FileName, file.B64, file.TypeFile, 1, 0)
+		if err != nil {
+			// TODO implements code
+			logger.Warning.Printf("The token was not sent: %v", err)
+			res.Code, res.Type, res.Msg = msg.GetByCode(cod, "", "")
+			return c.Status(http.StatusAccepted).JSON(res)
+		}
+		files = append(files, f)
+	}
+
+	res.Data = files
+	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "Creado Correctamente")
 	res.Error = false
 	return c.Status(http.StatusOK).JSON(res)
 }
