@@ -18,8 +18,10 @@ func RouterUser(app *fiber.App, db *sqlx.DB, txID string) {
 
 	representante := v1.Group("/representante")
 	representante.Post("/create", h.createRepresentante)
+	representante.Get("/:matricula_user", h.getRepresentanteByMatricula)
 
 	file := v1.Group("/file")
 	file.Post("/create", h.uploadFileAnexos)
+	file.Post("/base64", h.uploadBase64)
 
 }

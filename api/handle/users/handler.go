@@ -175,7 +175,33 @@ func (h *handlerUser) createRepresentante(c *fiber.Ctx) error {
 	return c.Status(http.StatusOK).JSON(res)
 }
 
-//TODO FILE
+func (h *handlerUser) getRepresentanteByMatricula(c *fiber.Ctx) error {
+	res := responsRepresentante{Error: true}
+
+	srvEntity := entity.NewServerEntity(h.DB, nil, h.TxID)
+
+	matriculaUser, err := strconv.ParseInt(c.Params("matricula_user"), 10, 64)
+	if err != nil {
+		// TODO implements code
+		logger.Warning.Printf("The token was not sent: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+	us, err := srvEntity.SrvRepresentante.GetRepresnetanteByMatriculaUser(matriculaUser)
+	if err != nil {
+		// TODO implements code
+		logger.Warning.Printf("The token was not sent: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+
+	res.Data = us
+	res.Code, res.Type, res.Msg = msg.GetByCode(29, "GetRepresentante", "Successfull")
+	res.Error = false
+	return c.Status(http.StatusOK).JSON(res)
+}
+
+// TODO FILE
 func (h *handlerUser) uploadFileAnexos(c *fiber.Ctx) error {
 	res := responseFiles{Error: true}
 	m := RequestFile{}
@@ -203,6 +229,32 @@ func (h *handlerUser) uploadFileAnexos(c *fiber.Ctx) error {
 
 	res.Data = files
 	res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "Creado Correctamente")
+	res.Error = false
+	return c.Status(http.StatusOK).JSON(res)
+}
+
+func (h *handlerUser) uploadBase64(c *fiber.Ctx) error {
+	res := responseB64{Error: true}
+	m := requestFileB64{}
+	err := c.BodyParser(&m)
+	if err != nil {
+		logger.Error.Printf("couldn't bind model login: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(1, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+
+	srvEntity := entity.NewServerEntity(h.DB, nil, h.TxID)
+
+	base64, err := srvEntity.SrvFile.GetB64ByName(m.FullPath)
+	if err != nil {
+		// TODO implements code
+		logger.Warning.Printf("The token was not sent: %v", err)
+		res.Code, res.Type, res.Msg = msg.GetByCode(99, "", "")
+		return c.Status(http.StatusAccepted).JSON(res)
+	}
+
+	res.B64 = base64
+	res.Code, res.Type, res.Msg = msg.GetByCode(200, "", "Base 64")
 	res.Error = false
 	return c.Status(http.StatusOK).JSON(res)
 }

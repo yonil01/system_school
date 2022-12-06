@@ -1,11 +1,15 @@
 package file
 
 import (
+	"bufio"
 	"encoding/base64"
 	"fmt"
 	"foro-hotel/internal/logger"
 	"foro-hotel/internal/models"
+	"github.com/google/uuid"
+	"io/ioutil"
 	"os"
+	"strings"
 )
 
 type PortsServerFile interface {
@@ -14,12 +18,34 @@ type PortsServerFile interface {
 	DeleteFile(id int) (int, error)
 	GetFileByID(id int) (*File, int, error)
 	GetAllFile() ([]*File, error)
+	GetB64ByName(fullPath string) (*string, error)
 }
 
 type service struct {
 	repository ServicesFileRepository
 	user       *models.User
 	txID       string
+}
+
+func (s *service) GetB64ByName(fullPath string) (*string, error) {
+	fo, err := os.Open(fullPath)
+	if err != nil {
+		logger.Error.Printf("couldn't open file from document %v", err)
+		return nil, err
+	}
+	reader := bufio.NewReader(fo)
+	content, err := ioutil.ReadAll(reader)
+	if err != nil {
+		logger.Error.Printf("couldn't get file. %v", err)
+		return nil, err
+	}
+	if err := fo.Close(); err != nil {
+		logger.Error.Printf("couldn't close *file. %v", err)
+		return nil, err
+	}
+	encoded := base64.StdEncoding.EncodeToString(content)
+
+	return &encoded, nil
 }
 
 func NewFileService(repository ServicesFileRepository, user *models.User, TxID string) PortsServerFile {
@@ -32,13 +58,15 @@ func (s *service) CreateFile(matriculaUser int64, name string, description strin
 		logger.Error.Println(s.txID, " - don't meet validations:", err)
 		return m, 15, err
 	}
-
+	ext := getExtensionFile(fileName)
+	fileName = fmt.Sprintf("%s.%s", uuid.New().String(), ext)
 	pathFile := fmt.Sprintf("%s%s", path, fileName)
 	resp, err := UploadFile(pathFile, b64)
 	if err != nil || !resp {
 		logger.Error.Println(s.txID, " - couldn't create File :", err)
 		return m, 3, err
 	}
+	m.FileName = fileName
 
 	if err := s.repository.create(m); err != nil {
 		if err.Error() == "ecatch:108" {
@@ -119,4 +147,9 @@ func UploadFile(filename string, b64 string) (bool, error) {
 		return false, err
 	}
 	return true, nil
+}
+
+func getExtensionFile(path string) string {
+	pathArray := strings.Split(path, ".")
+	return pathArray[(len(pathArray) - 1)]
 }

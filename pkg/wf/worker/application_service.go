@@ -42,10 +42,7 @@ func (s *service) CreateWorker(matriculaUser int64, status int, isDelete int) (*
 
 func (s *service) UpdateWorker(id int, matriculaUser int64, status int, isDelete int) (*Worker, int, error) {
 	m := NewWorker(id, matriculaUser, status, isDelete)
-	if id == 0 {
-		logger.Error.Println(s.txID, " - don't meet validations:", fmt.Errorf("id is required"))
-		return m, 15, fmt.Errorf("id is required")
-	}
+
 	if valid, err := m.valid(); !valid {
 		logger.Error.Println(s.txID, " - don't meet validations:", err)
 		return m, 15, err

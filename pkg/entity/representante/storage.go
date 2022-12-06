@@ -18,6 +18,7 @@ type ServicesRepresentanteRepository interface {
 	delete(id int) error
 	getByID(id int) (*Representante, error)
 	getAll() ([]*Representante, error)
+	getByMatriculaUser(matriculaUser int64) (*Representante, error)
 }
 
 func FactoryStorage(db *sqlx.DB, user *models.User, txID string) ServicesRepresentanteRepository {

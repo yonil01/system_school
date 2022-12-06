@@ -12,6 +12,7 @@ type PortsServerRepresentante interface {
 	DeleteRepresentante(id int) (int, error)
 	GetRepresentanteByID(id int) (*Representante, int, error)
 	GetAllRepresentante() ([]*Representante, error)
+	GetRepresnetanteByMatriculaUser(matriculaUser int64) (*Representante, error)
 }
 
 type service struct {
@@ -88,4 +89,8 @@ func (s *service) GetRepresentanteByID(id int) (*Representante, int, error) {
 
 func (s *service) GetAllRepresentante() ([]*Representante, error) {
 	return s.repository.getAll()
+}
+
+func (s *service) GetRepresnetanteByMatriculaUser(matriculaUser int64) (*Representante, error) {
+	return s.repository.getByMatriculaUser(matriculaUser)
 }

@@ -89,3 +89,15 @@ type responseFiles struct {
 	Type  string       `json:"type"`
 	Msg   string       `json:"msg"`
 }
+
+type requestFileB64 struct {
+	FullPath string `json:"full_path" db:"full_path" valid:"required"`
+}
+
+type responseB64 struct {
+	Error bool    `json:"error"`
+	B64   *string `json:"b64"`
+	Code  int     `json:"code"`
+	Type  string  `json:"type"`
+	Msg   string  `json:"msg"`
+}

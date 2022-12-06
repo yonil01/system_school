@@ -54,7 +54,7 @@ func (s *sqlserver) create(m *Worker) error {
 func (s *sqlserver) update(m *Worker) error {
 	date := time.Now()
 	m.UpdatedAt = date
-	const sqlUpdate = `UPDATE wf.worker SET matricula_user = :matricula_user, status = :status, is_delete = :is_delete, updated_at = :updated_at WHERE id = :id `
+	const sqlUpdate = `UPDATE wf.worker SET matricula_user = :matricula_user, status = :status, is_delete = :is_delete, updated_at = :updated_at WHERE matricula_user = :matricula_user `
 	rs, err := s.DB.NamedExec(sqlUpdate, &m)
 	if err != nil {
 		return err
@@ -81,9 +81,9 @@ func (s *sqlserver) delete(id int) error {
 
 // GetByID consulta un registro por su ID
 func (s *sqlserver) getByID(id int) (*Worker, error) {
-	const sqlGetByID = `SELECT convert(nvarchar(50), id) id , matricula_user, status, is_delete, created_at, updated_at FROM wf.worker  WITH (NOLOCK)  WHERE id = @id `
+	const sqlGetByID = `SELECT convert(nvarchar(50), id) id , matricula_user, status, is_delete, created_at, updated_at FROM wf.worker  WITH (NOLOCK)  WHERE matricula_user = @matricula_user `
 	mdl := Worker{}
-	err := s.DB.Get(&mdl, sqlGetByID, sql.Named("id", id))
+	err := s.DB.Get(&mdl, sqlGetByID, sql.Named("matricula_user", id))
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil

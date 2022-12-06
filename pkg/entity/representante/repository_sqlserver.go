@@ -115,3 +115,16 @@ func (s *sqlserver) getAll() ([]*Representante, error) {
 	}
 	return ms, nil
 }
+
+func (s *sqlserver) getByMatriculaUser(matriculaUser int64) (*Representante, error) {
+	const sqlGetByID = `SELECT top 1 convert(nvarchar(50), id) id , matricula_user, type_representante, notification, dni, direction, names, lastnames, cell_phone, email, status, is_delete, created_at, updated_at FROM entity.representante  WITH (NOLOCK)  WHERE matricula_user = @matricula_user ORDER BY created_at DESC `
+	mdl := Representante{}
+	err := s.DB.Get(&mdl, sqlGetByID, sql.Named("matricula_user", matriculaUser))
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return &mdl, err
+	}
+	return &mdl, nil
+}
